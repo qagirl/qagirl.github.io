@@ -2,16 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>qagirl.coding.me/2017/05/13/test/</loc>
+    <loc>qagirl.coding.me/2017/05/13/helloworld/</loc>
     
-    <lastmod>2017-05-13T12:46:39.000Z</lastmod>
+    <lastmod>2017-05-13T13:41:18.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>qagirl.coding.me/2017/05/13/helloworld/</loc>
+    <loc>qagirl.coding.me/404.html</loc>
     
-    <lastmod>2017-05-13T12:21:18.000Z</lastmod>
+    <lastmod>2017-05-13T13:02:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>qagirl.coding.me/guestbook/index.html</loc>
+    
+    <lastmod>2017-05-13T13:00:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>qagirl.coding.me/categories/index.html</loc>
+    
+    <lastmod>2017-05-13T12:50:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>qagirl.coding.me/tags/index.html</loc>
+    
+    <lastmod>2017-05-13T12:50:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>qagirl.coding.me/about/index.html</loc>
+    
+    <lastmod>2017-05-13T12:50:22.000Z</lastmod>
     
   </url>
   
