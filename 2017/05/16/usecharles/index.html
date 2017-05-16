@@ -98,7 +98,15 @@
 <meta property="og:image" content="/2017/05/16/usecharles/record.png">
 <meta property="og:image" content="/2017/05/16/usecharles/add.png">
 <meta property="og:image" content="/2017/05/16/usecharles/focus.png">
-<meta property="og:updated_time" content="2017-05-16T13:09:32.000Z">
+<meta property="og:image" content="/2017/05/16/usecharles/set.png">
+<meta property="og:image" content="/2017/05/16/usecharles/net.png">
+<meta property="og:image" content="/2017/05/16/usecharles/IP.png">
+<meta property="og:image" content="/2017/05/16/usecharles/phone.png">
+<meta property="og:image" content="/2017/05/16/usecharles/allow.png">
+<meta property="og:image" content="/2017/05/16/usecharles/ssl.png">
+<meta property="og:image" content="/2017/05/16/usecharles/ssl-bo.png">
+<meta property="og:image" content="/2017/05/16/usecharles/test.png">
+<meta property="og:updated_time" content="2017-05-16T13:42:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qagirl 教你玩转 Charles">
 <meta name="twitter:description" content="能破解Charles的你，不牛逼！会使用Charles的你，才是最胖的！">
@@ -414,6 +422,18 @@
 <p><div><br>  <img src="/2017/05/16/usecharles/focus.png"><br></div><br>这种方式可以临时性的，快速地过滤出一些没有通过关键字的一类网络请求。</p>
 <h4 id="截取-Android手机-上的网络封包"><a href="#截取-Android手机-上的网络封包" class="headerlink" title="截取 Android手机 上的网络封包"></a>截取 Android手机 上的网络封包</h4><p>Charles 通常用来截取本地上的网络封包，但是当我们需要时，我们也可以用来截取其它设备上的网络请求。下面我就以 Android手机 为例，讲解如何进行相应操作。</p>
 <h6 id="Charles-上的设置"><a href="#Charles-上的设置" class="headerlink" title="Charles 上的设置"></a>Charles 上的设置</h6><p>要截取 Android手机 上的网络请求，我们首先需要将 Charles 的代理功能打开。在 Charles 的菜单栏上选择 “Proxy”-&gt;”Proxy Settings”，填入代理端口 8888，并且勾上 “Enable transparent HTTP proxying” 就完成了在 Charles 上的设置。如下图所示:</p>
+<p><div><br>  <img src="/2017/05/16/usecharles/set.png"><br></div></p>
+<h6 id="Android手机-上的设置"><a href="#Android手机-上的设置" class="headerlink" title="Android手机 上的设置"></a>Android手机 上的设置</h6><p>首先我们需要获取 Charles 运行所在电脑的 IP 地址，苹果图标-系统偏好设置-网络-高级-TCP／IP，如下图所示：</p>
+<p><div><br>  <img src="/2017/05/16/usecharles/net.png"><br></div></p>
+<p><div><br>  <img src="/2017/05/16/usecharles/IP.png"><br></div><br>在 Android 手机 的 “ 设置 “-&gt;” 无线局域网 “ 中，可以看到当前连接的 wifi 名，通过点击右边的详情键，可以看到当前连接上的 wifi 的详细信息。在其最底部有「代理设置」一项，我们点进去将其选择成手动，然后填上 Charles 运行所在的电脑的 IP，以及端口号 8888，如下图所示：</p>
+<p><div><br>  <img src="/2017/05/16/usecharles/phone.png"><br></div><br>设置好之后，我们打开 Android 手机上的任意需要网络通讯的程序，就可以看到 Charles 弹出 手机 请求连接的确认菜单（如下图所示），点击 “Allow” 即可完成设置。</p>
+<p><div><br>  <img src="/2017/05/16/usecharles/allow.png"><br></div></p>
+<h4 id="截取-Https-通讯信息"><a href="#截取-Https-通讯信息" class="headerlink" title="截取 Https 通讯信息"></a>截取 Https 通讯信息</h4><h5 id="安装证书"><a href="#安装证书" class="headerlink" title="安装证书"></a>安装证书</h5><p>如果你需要截取分析 Https 协议相关的内容。那么需要安装 Charles 的 CA 证书。具体步骤如下。</p>
+<p>首先我们需要在 Mac 电脑上安装证书。点击 Charles 的顶部菜单，选择 “Help” -&gt; “SSL Proxying” -&gt; “Install Charles Root Certificate”,如下图所示：</p>
+<p><div><br>  <img src="/2017/05/16/usecharles/ssl.png"><br></div></p>
+<h5 id="截取移动设备中的-Https-通讯信息"><a href="#截取移动设备中的-Https-通讯信息" class="headerlink" title="截取移动设备中的 Https 通讯信息"></a>截取移动设备中的 Https 通讯信息</h5><p>如果我们需要在 iOS 或 Android 机器上截取 Https 协议的通讯内容，还需要在手机上安装相应的证书。点击 Charles 的顶部菜单，选择 “Help” -&gt; “SSL Proxying” -&gt; “Install Charles Root Certificate on a Mobile Device or Remote Browser”，然后就可以看到 Charles 弹出的简单的安装教程。如下图所示：</p>
+<p><div><br>  <img src="/2017/05/16/usecharles/ssl-bo.png"><br></div></p>
+<p><div><br>  <img src="/2017/05/16/usecharles/test.png"><br></div><br>按照我们之前说的教程，在设备上设置好 Charles 为代理后，在手机浏览器中访问地址：<a href="http://chls.pro/ssl" target="_blank" rel="external">http://chls.pro/ssl</a> ，即可打开证书安装的界面，安装完证书后，就可以截取手机上的 Https 通讯内容了。<br>未完待续～～～～</p>
 
       
     </div>
@@ -608,7 +628,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Charles-功能介绍"><span class="nav-number">1.</span> <span class="nav-text">Charles 功能介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个背景"><span class="nav-number">1.1.</span> <span class="nav-text">一个背景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将-Charles-设置成系统代理"><span class="nav-number">1.1.1.</span> <span class="nav-text">将 Charles 设置成系统代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Charles-主界面介绍"><span class="nav-number">1.1.2.</span> <span class="nav-text">Charles 主界面介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤网络请求"><span class="nav-number">1.1.3.</span> <span class="nav-text">过滤网络请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#截取-Android手机-上的网络封包"><span class="nav-number">1.1.4.</span> <span class="nav-text">截取 Android手机 上的网络封包</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Charles-上的设置"><span class="nav-number">1.1.4.0.1.</span> <span class="nav-text">Charles 上的设置</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Charles-功能介绍"><span class="nav-number">1.</span> <span class="nav-text">Charles 功能介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个背景"><span class="nav-number">1.1.</span> <span class="nav-text">一个背景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将-Charles-设置成系统代理"><span class="nav-number">1.1.1.</span> <span class="nav-text">将 Charles 设置成系统代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Charles-主界面介绍"><span class="nav-number">1.1.2.</span> <span class="nav-text">Charles 主界面介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤网络请求"><span class="nav-number">1.1.3.</span> <span class="nav-text">过滤网络请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#截取-Android手机-上的网络封包"><span class="nav-number">1.1.4.</span> <span class="nav-text">截取 Android手机 上的网络封包</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Charles-上的设置"><span class="nav-number">1.1.4.0.1.</span> <span class="nav-text">Charles 上的设置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Android手机-上的设置"><span class="nav-number">1.1.4.0.2.</span> <span class="nav-text">Android手机 上的设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#截取-Https-通讯信息"><span class="nav-number">1.1.5.</span> <span class="nav-text">截取 Https 通讯信息</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装证书"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">安装证书</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#截取移动设备中的-Https-通讯信息"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">截取移动设备中的 Https 通讯信息</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
