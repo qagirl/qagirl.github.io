@@ -95,7 +95,7 @@
 <meta property="og:description" content="能破解Charles的你，不牛逼！会使用Charles的你，才是最胖的！">
 <meta property="og:image" content="/2017/05/16/usecharles/Mac-proxy.png">
 <meta property="og:image" content="/2017/05/16/usecharles/Charles-info.png">
-<meta property="og:updated_time" content="2017-05-16T12:49:38.000Z">
+<meta property="og:updated_time" content="2017-05-16T12:50:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qagirl 教你玩转 Charles">
 <meta name="twitter:description" content="能破解Charles的你，不牛逼！会使用Charles的你，才是最胖的！">
@@ -398,8 +398,10 @@
 <p><div><br>  <img src="/2017/05/16/usecharles/Charles-info.png"><br></div><br>Charles 主要提供两种查看封包的视图，分别名为 “Structure” 和 “Sequence”。</p>
 <ol>
 <li>Structure 视图将网络请求按访问的域名分类。</li>
-<li>Sequence 视图将网络请求按访问的时间排序。<br>大家可以根据具体的需要在这两种视图之前来回切换。请求多了有些时候会看不过来，Charles 提供了一个简单的 Filter 功能，可以输入关键字来快速筛选出 URL 中带指定关键字的网络请求。<br>对于某一个具体的网络请求，你可以查看其详细的请求内容和响应内容。如果请求内容是 POST 的表单，Charles 会自动帮你将表单进行分项显示。如果响应内容是 JSON 格式的，那么 Charles 可以自动帮你将 JSON 内容格式化，方便你查看。如果响应内容是图片，那么 Charles 可以显示出图片的预览。</li>
+<li>Sequence 视图将网络请求按访问的时间排序。</li>
 </ol>
+<p>大家可以根据具体的需要在这两种视图之前来回切换。请求多了有些时候会看不过来，Charles 提供了一个简单的 Filter 功能，可以输入关键字来快速筛选出 URL 中带指定关键字的网络请求。</p>
+<p>对于某一个具体的网络请求，你可以查看其详细的请求内容和响应内容。如果请求内容是 POST 的表单，Charles 会自动帮你将表单进行分项显示。如果响应内容是 JSON 格式的，那么 Charles 可以自动帮你将 JSON 内容格式化，方便你查看。如果响应内容是图片，那么 Charles 可以显示出图片的预览。</p>
 <h4 id="过滤网络请求"><a href="#过滤网络请求" class="headerlink" title="过滤网络请求"></a>过滤网络请求</h4><p>通常情况下，我们需要对网络请求进行过滤，只监控向指定目录服务器上发送的请求。对于这种需求，以下几种办法：</p>
 <p>方法一： 在主界面的中部的 Filter 栏中填入需要过滤出来的关键字。例如我们的服务器的地址是：<a href="http://yuantiku.com" target="_blank" rel="external">http://yuantiku.com</a> , 那么只需要在 Filter 栏中填入 yuantiku 即可。</p>
 <p>方法二：在 Charles 的菜单栏选择 “Proxy”-&gt;”Recording Settings”，然后选择 Include 栏，选择添加一个项目，然后填入需要监控的协议，主机地址，端口号。这样就可以只截取目标网站的封包了。如下图所示：</p>
