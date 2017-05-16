@@ -95,7 +95,7 @@
 <meta property="og:description" content="能破解Charles的你，不牛逼！会使用Charles的你，才是最胖的！">
 <meta property="og:image" content="/2017/05/16/usecharles/Mac-proxy.png">
 <meta property="og:image" content="/2017/05/16/usecharles/Charles-info.png">
-<meta property="og:updated_time" content="2017-05-16T12:45:37.000Z">
+<meta property="og:updated_time" content="2017-05-16T12:47:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qagirl 教你玩转 Charles">
 <meta name="twitter:description" content="能破解Charles的你，不牛逼！会使用Charles的你，才是最胖的！">
@@ -372,40 +372,24 @@
       
 
       
-        <h2 id="Charles-功能介绍"><a href="#Charles-功能介绍" class="headerlink" title="Charles 功能介绍"></a>Charles 功能介绍</h2><h3 id="一个背景"><a href="#一个背景" class="headerlink" title="一个背景"></a>一个背景</h3><p>众所周知，Charles的功能是很强大的。</p>
-<p>Charles 主要的功能包括：</p>
+        <h2 id="Charles-功能介绍"><a href="#Charles-功能介绍" class="headerlink" title="Charles 功能介绍"></a>Charles 功能介绍</h2><h3 id="一个背景"><a href="#一个背景" class="headerlink" title="一个背景"></a>一个背景</h3><p>众所周知，Charles的功能是很强大的。<br>Charles 主要的功能包括：</p>
 <ol>
 <li>截取 Http 和 Https 网络封包。</li>
 <li>支持重发网络请求，方便后端调试。</li>
 <li>支持修改网络请求参数。</li>
 <li>支持网络请求的截获并动态修改。</li>
-<li>支持模拟慢速网络。</li>
-</ol>
-<p>Charles 4 新增的主要功能包括：</p>
-<ol>
+<li>支持模拟慢速网络。<br>Charles 4 新增的主要功能包括：</li>
 <li>支持 Http 2。</li>
-<li>支持 IPv6。</li>
-</ol>
-<h4 id="将-Charles-设置成系统代理"><a href="#将-Charles-设置成系统代理" class="headerlink" title="将 Charles 设置成系统代理"></a>将 Charles 设置成系统代理</h4><p>Charles 是通过将自己设置成代理服务器来完成封包截取的，所以使用 Charles 的第一步是将其设置成系统的代理服务器。<br>需要将 Charles 设置成系统代理时，选择菜单中的 “Proxy” -&gt; “Mac OS X Proxy” 来将 Charles 设置成系统代理。如下所示：</p>
-<div><br>  <img src="/2017/05/16/usecharles/Mac-proxy.png"><br></div>
-
-<p>如果在Charles主界面中没有看到请求Sequence,请仔细检查以下地方：</p>
-<ol>
+<li>支持 IPv6。<h4 id="将-Charles-设置成系统代理"><a href="#将-Charles-设置成系统代理" class="headerlink" title="将 Charles 设置成系统代理"></a>将 Charles 设置成系统代理</h4>Charles 是通过将自己设置成代理服务器来完成封包截取的，所以使用 Charles 的第一步是将其设置成系统的代理服务器。<br>需要将 Charles 设置成系统代理时，选择菜单中的 “Proxy” -&gt; “Mac OS X Proxy” 来将 Charles 设置成系统代理。如下所示：<br><div><br><img src="/2017/05/16/usecharles/Mac-proxy.png"><br></div><br>如果在Charles主界面中没有看到请求Sequence,请仔细检查以下地方：</li>
 <li>是否配置其他代理，如系统偏好设置——网络——高级…——代理——自动代理配置勾选，则应取消勾选。</li>
 <li>是否打开Charles界面上方同心圆录制按钮，按钮内圆呈红色说明已打开录制。</li>
 </ol>
 <h4 id="Charles-主界面介绍"><a href="#Charles-主界面介绍" class="headerlink" title="Charles 主界面介绍"></a>Charles 主界面介绍</h4><p>Charles 主界面如下图所示：</p>
-<div><br>  <img src="/2017/05/16/usecharles/Charles-info.png"><br></div>
-
-<p>Charles 主要提供两种查看封包的视图，分别名为 “Structure” 和 “Sequence”。</p>
+<p><div><br>  <img src="/2017/05/16/usecharles/Charles-info.png"><br></div><br>Charles 主要提供两种查看封包的视图，分别名为 “Structure” 和 “Sequence”。</p>
 <ol>
 <li>Structure 视图将网络请求按访问的域名分类。</li>
-<li>Sequence 视图将网络请求按访问的时间排序。</li>
+<li>Sequence 视图将网络请求按访问的时间排序。<br>大家可以根据具体的需要在这两种视图之前来回切换。请求多了有些时候会看不过来，Charles 提供了一个简单的 Filter 功能，可以输入关键字来快速筛选出 URL 中带指定关键字的网络请求。<br>对于某一个具体的网络请求，你可以查看其详细的请求内容和响应内容。如果请求内容是 POST 的表单，Charles 会自动帮你将表单进行分项显示。如果响应内容是 JSON 格式的，那么 Charles 可以自动帮你将 JSON 内容格式化，方便你查看。如果响应内容是图片，那么 Charles 可以显示出图片的预览。<h4 id="过滤网络请求"><a href="#过滤网络请求" class="headerlink" title="过滤网络请求"></a>过滤网络请求</h4>通常情况下，我们需要对网络请求进行过滤，只监控向指定目录服务器上发送的请求。对于这种需求，以下几种办法：<br>方法一： 在主界面的中部的 Filter 栏中填入需要过滤出来的关键字。例如我们的服务器的地址是：<a href="http://yuantiku.com" target="_blank" rel="external">http://yuantiku.com</a> , 那么只需要在 Filter 栏中填入 yuantiku 即可。<br>方法二：在 Charles 的菜单栏选择 “Proxy”-&gt;”Recording Settings”，然后选择 Include 栏，选择添加一个项目，然后填入需要监控的协议，主机地址，端口号。这样就可以只截取目标网站的封包了。如下图所示：</li>
 </ol>
-<p>大家可以根据具体的需要在这两种视图之前来回切换。请求多了有些时候会看不过来，Charles 提供了一个简单的 Filter 功能，可以输入关键字来快速筛选出 URL 中带指定关键字的网络请求。<br>对于某一个具体的网络请求，你可以查看其详细的请求内容和响应内容。如果请求内容是 POST 的表单，Charles 会自动帮你将表单进行分项显示。如果响应内容是 JSON 格式的，那么 Charles 可以自动帮你将 JSON 内容格式化，方便你查看。如果响应内容是图片，那么 Charles 可以显示出图片的预览。</p>
-<h4 id="过滤网络请求"><a href="#过滤网络请求" class="headerlink" title="过滤网络请求"></a>过滤网络请求</h4><p>通常情况下，我们需要对网络请求进行过滤，只监控向指定目录服务器上发送的请求。对于这种需求，以下几种办法：</p>
-<p>方法一： 在主界面的中部的 Filter 栏中填入需要过滤出来的关键字。例如我们的服务器的地址是：<a href="http://yuantiku.com" target="_blank" rel="external">http://yuantiku.com</a> , 那么只需要在 Filter 栏中填入 yuantiku 即可。</p>
-<p>方法二：在 Charles 的菜单栏选择 “Proxy”-&gt;”Recording Settings”，然后选择 Include 栏，选择添加一个项目，然后填入需要监控的协议，主机地址，端口号。这样就可以只截取目标网站的封包了。如下图所示：</p>
 
       
     </div>
