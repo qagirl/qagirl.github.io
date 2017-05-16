@@ -95,7 +95,10 @@
 <meta property="og:description" content="能破解Charles的你，不牛逼！会使用Charles的你，才是最胖的！">
 <meta property="og:image" content="/2017/05/16/usecharles/Mac-proxy.png">
 <meta property="og:image" content="/2017/05/16/usecharles/Charles-info.png">
-<meta property="og:updated_time" content="2017-05-16T12:50:50.000Z">
+<meta property="og:image" content="/2017/05/16/usecharles/record.png">
+<meta property="og:image" content="/2017/05/16/usecharles/add.png">
+<meta property="og:image" content="/2017/05/16/usecharles/focus.png">
+<meta property="og:updated_time" content="2017-05-16T13:09:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qagirl 教你玩转 Charles">
 <meta name="twitter:description" content="能破解Charles的你，不牛逼！会使用Charles的你，才是最胖的！">
@@ -403,8 +406,14 @@
 <p>大家可以根据具体的需要在这两种视图之前来回切换。请求多了有些时候会看不过来，Charles 提供了一个简单的 Filter 功能，可以输入关键字来快速筛选出 URL 中带指定关键字的网络请求。</p>
 <p>对于某一个具体的网络请求，你可以查看其详细的请求内容和响应内容。如果请求内容是 POST 的表单，Charles 会自动帮你将表单进行分项显示。如果响应内容是 JSON 格式的，那么 Charles 可以自动帮你将 JSON 内容格式化，方便你查看。如果响应内容是图片，那么 Charles 可以显示出图片的预览。</p>
 <h4 id="过滤网络请求"><a href="#过滤网络请求" class="headerlink" title="过滤网络请求"></a>过滤网络请求</h4><p>通常情况下，我们需要对网络请求进行过滤，只监控向指定目录服务器上发送的请求。对于这种需求，以下几种办法：</p>
-<p>方法一： 在主界面的中部的 Filter 栏中填入需要过滤出来的关键字。例如我们的服务器的地址是：<a href="http://yuantiku.com" target="_blank" rel="external">http://yuantiku.com</a> , 那么只需要在 Filter 栏中填入 yuantiku 即可。</p>
+<p>方法一： 在主界面的中部的 Filter 栏中填入需要过滤出来的关键字。例如我们的服务器的地址是：<a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a> , 那么只需要在 Filter 栏中填入 baidu 即可。</p>
 <p>方法二：在 Charles 的菜单栏选择 “Proxy”-&gt;”Recording Settings”，然后选择 Include 栏，选择添加一个项目，然后填入需要监控的协议，主机地址，端口号。这样就可以只截取目标网站的封包了。如下图所示：</p>
+<p><div><br>  <img src="/2017/05/16/usecharles/record.png"><br></div></p>
+<p><div><br>  <img src="/2017/05/16/usecharles/add.png"><br></div><br>通常情况下，我们使用方法一做一些临时性的封包过滤，使用方法二做一些经常性的封包过滤。</p>
+<p>方法三：在想过滤的网络请求上右击，选择 “Focus”，之后在 Filter 一栏勾选上 Focussed 一项，如下图所示：</p>
+<p><div><br>  <img src="/2017/05/16/usecharles/focus.png"><br></div><br>这种方式可以临时性的，快速地过滤出一些没有通过关键字的一类网络请求。</p>
+<h4 id="截取-Android手机-上的网络封包"><a href="#截取-Android手机-上的网络封包" class="headerlink" title="截取 Android手机 上的网络封包"></a>截取 Android手机 上的网络封包</h4><p>Charles 通常用来截取本地上的网络封包，但是当我们需要时，我们也可以用来截取其它设备上的网络请求。下面我就以 Android手机 为例，讲解如何进行相应操作。</p>
+<h6 id="Charles-上的设置"><a href="#Charles-上的设置" class="headerlink" title="Charles 上的设置"></a>Charles 上的设置</h6><p>要截取 Android手机 上的网络请求，我们首先需要将 Charles 的代理功能打开。在 Charles 的菜单栏上选择 “Proxy”-&gt;”Proxy Settings”，填入代理端口 8888，并且勾上 “Enable transparent HTTP proxying” 就完成了在 Charles 上的设置。如下图所示:</p>
 
       
     </div>
@@ -599,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Charles-功能介绍"><span class="nav-number">1.</span> <span class="nav-text">Charles 功能介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个背景"><span class="nav-number">1.1.</span> <span class="nav-text">一个背景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将-Charles-设置成系统代理"><span class="nav-number">1.1.1.</span> <span class="nav-text">将 Charles 设置成系统代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Charles-主界面介绍"><span class="nav-number">1.1.2.</span> <span class="nav-text">Charles 主界面介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤网络请求"><span class="nav-number">1.1.3.</span> <span class="nav-text">过滤网络请求</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Charles-功能介绍"><span class="nav-number">1.</span> <span class="nav-text">Charles 功能介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个背景"><span class="nav-number">1.1.</span> <span class="nav-text">一个背景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将-Charles-设置成系统代理"><span class="nav-number">1.1.1.</span> <span class="nav-text">将 Charles 设置成系统代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Charles-主界面介绍"><span class="nav-number">1.1.2.</span> <span class="nav-text">Charles 主界面介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤网络请求"><span class="nav-number">1.1.3.</span> <span class="nav-text">过滤网络请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#截取-Android手机-上的网络封包"><span class="nav-number">1.1.4.</span> <span class="nav-text">截取 Android手机 上的网络封包</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Charles-上的设置"><span class="nav-number">1.1.4.0.1.</span> <span class="nav-text">Charles 上的设置</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
