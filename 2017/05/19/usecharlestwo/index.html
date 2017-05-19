@@ -100,7 +100,7 @@
 <meta property="og:image" content="/2017/05/19/usecharlestwo/execute.png">
 <meta property="og:image" content="/2017/05/19/usecharlestwo/map.png">
 <meta property="og:image" content="/2017/05/19/usecharlestwo/to.png">
-<meta property="og:updated_time" content="2017-05-19T09:31:24.000Z">
+<meta property="og:updated_time" content="2017-05-19T09:33:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qagirl 教你玩转 Charles（二）">
 <meta name="twitter:description" content="看吧！都说了Charles很牛了吧！一篇都没有写完！现在继续写！">
@@ -378,7 +378,7 @@
 
       
         <h2 id="Charles-功能介绍"><a href="#Charles-功能介绍" class="headerlink" title="Charles 功能介绍"></a>Charles 功能介绍</h2><h3 id="模拟慢网速"><a href="#模拟慢网速" class="headerlink" title="模拟慢网速"></a>模拟慢网速</h3><p>作为一个qagirl，在测试过程中，我们常常需要模拟慢速网络或者高延迟的网络，测试应用的表现是否正常。Charles 对此需求提供了很好的支持。<br>在 Charles 的菜单上，选择“Proxy”-&gt;”Throttle Setting” 项，在之后弹出的对话框中，我们可以勾选上 “Enable Throttling”，并且可以设置 Throttle Preset 的类型。如下图所示：</p>
-<div><br>  <img src="/2017/05/19/usecharlestwo/net.png"><br></div><br>如果我们只想模拟指定网站的慢速网络，可以再勾选上图中的 “Only for selected hosts” 项，然后在对话框的下半部分设置中增加指定的 hosts 项即可。<br><br>### 修改网络请求内容<br>有些时候为了调试服务器的接口，我们需要反复尝试不同参数的网络请求。Charles 可以方便地提供网络请求的修改和重发功能。只需要在以往的网络请求上点击右键，选择 “Compose”，即可创建一个可编辑的网络请求。如下所示：<br><div><br>  <img src="/2017/05/19/usecharlestwo/exit.png"><br></div><br>我们可以修改该请求的任何信息，包括 URL 地址、端口、参数等，之后点击 “Execute” 即可发送该修改后的网络请求（如下图所示）。Charles 支持我们多次修改和发送该请求，这对于我们和服务器端调试接口非常方便，如下图所示：<br><div><br>  <img src="/2017/05/19/usecharlestwo/execute.png"><br></div>
+<div><br>  <img src="/2017/05/19/usecharlestwo/net.png"><br></div><br>如果我们只想模拟指定网站的慢速网络，可以再勾选上图中的 “Only for selected hosts” 项，然后在对话框的下半部分设置中增加指定的 hosts 项即可。<br><br>### 修改网络请求内容<br><br>有些时候为了调试服务器的接口，我们需要反复尝试不同参数的网络请求。Charles 可以方便地提供网络请求的修改和重发功能。只需要在以往的网络请求上点击右键，选择 “Compose”，即可创建一个可编辑的网络请求。如下所示：<br><div><br>  <img src="/2017/05/19/usecharlestwo/exit.png"><br></div><br>我们可以修改该请求的任何信息，包括 URL 地址、端口、参数等，之后点击 “Execute” 即可发送该修改后的网络请求（如下图所示）。Charles 支持我们多次修改和发送该请求，这对于我们和服务器端调试接口非常方便，如下图所示：<br><div><br>  <img src="/2017/05/19/usecharlestwo/execute.png"><br></div>
 
 <h3 id="给服务器做压力测试"><a href="#给服务器做压力测试" class="headerlink" title="给服务器做压力测试"></a>给服务器做压力测试</h3><p>我们可以使用 Charles 的 Repeat 功能来简单地测试服务器的并发处理能力，方法如下。<br>我们在想打压的网络请求上（POST 或 GET 请求均可）右击，然后选择 「Repeat Advanced」菜单项，如下所示:</p>
 <div><br>  <img src="/2017/05/19/usecharlestwo/test.png"><br></div><br>接着我们就可以在弹出的对话框中，选择打压的并发线程数以及打压次数，确定之后，即可开始打压。<br><div><br>  <img src="/2017/05/19/usecharlestwo/execute.png"><br></div>
