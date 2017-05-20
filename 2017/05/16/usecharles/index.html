@@ -820,4 +820,20 @@
   
 
 </body>
+
+<script>
+  $(document).ready(function(){
+    var url = window.location.pathname;
+    console.log(url);
+    if("/" === url){
+      jQuery.getScript("/plugins/js/love.js")
+      .done(function () {
+        console.log("bbbbbb");
+      })
+      .fail(function () {
+        console.log("dddd");
+      });
+    }
+  })
+</script>
 </html>
