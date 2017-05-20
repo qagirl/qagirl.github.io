@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>qagirl.coding.me/tags/index.html</loc>
+    
+    <lastmod>2017-05-20T02:23:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>qagirl.coding.me/categories/index.html</loc>
+    
+    <lastmod>2017-05-20T02:22:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>qagirl.coding.me/2017/05/19/usecharlestwo/</loc>
     
     <lastmod>2017-05-19T09:33:10.000Z</lastmod>
@@ -40,20 +54,6 @@
     <loc>qagirl.coding.me/guestbook/index.html</loc>
     
     <lastmod>2017-05-13T13:00:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>qagirl.coding.me/categories/index.html</loc>
-    
-    <lastmod>2017-05-13T12:50:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>qagirl.coding.me/tags/index.html</loc>
-    
-    <lastmod>2017-05-13T12:50:35.000Z</lastmod>
     
   </url>
   
