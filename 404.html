@@ -79,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.1.1" />
 
 
 
@@ -573,12 +573,10 @@
     var url = window.location.pathname;
     console.log(url);
     if("/" === url){
-      jQuery.getScript("/plugins/js/love.js")
+      jQuery.getScript("/js/src/love.js")
       .done(function () {
-        console.log("bbbbbb");
       })
       .fail(function () {
-        console.log("dddd");
       });
     }
   })

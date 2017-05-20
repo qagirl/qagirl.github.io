@@ -7,7 +7,31 @@ function(e, t, a) {
     }
     function r() {
         for (var e = 0; e < d.length; e++) try {
-            d[e].alpha <= 0="" ?="" (t.body.removechild(d[e].el),="" d.splice(e,="" 1))="" :="" (d[e].y--,="" d[e].scale="" +=".004," d[e].alpha="" -=".013," d[e].el.style.csstext="left:" d[e].x="" "px;top:"="" d[e].y="" "px;opacity:"="" ";transform:scale("="" ","="" ")="" rotate(45deg);background:"="" d[e].color="" ";z-index:99999");="" }="" catch(e)="" {}="" requestanimationframe(r)="" function="" o()="" {="" var="" t="function" =="typeof" e.onclick="" &&="" e.onclick;="" t(),="" i(e)="" lastpost="false;" lasturl="window.location.pathname;" is_post(){="" 根据自己实际需要来判断="" url="window.location.pathname;" if(lastpost){="" if(lasturl="=" url){="" return="" lastpost;="" urlarray="url.split(" ");"="" if(urlarray.length=""> 2){
+            d[e].alpha <= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y--, d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = "left:" + d[e].x + "px;top:" + d[e].y + "px;opacity:" + d[e].alpha + ";transform:scale(" + d[e].scale + "," + d[e].scale + ") rotate(45deg);background:" + d[e].color + ";z-index:99999");
+        } catch(e) {}
+        requestAnimationFrame(r)
+    }
+    function o() {
+        var t = "function" == typeof e.onclick && e.onclick;
+        e.onclick = function(e) {
+            t && t(),
+            i(e)
+        }
+    }
+
+    var lastPost = false;
+    var lastUrl = window.location.pathname;
+
+    function is_post(){//根据自己实际需要来判断
+      var url = window.location.pathname;
+      if(lastPost){
+        if(lastUrl == url){
+          return lastPost;
+        }
+      }
+      lastUrl = url;
+      var urlArray = url.split("/");
+      if(urlArray.length > 2){
         var id = $(".article").eq(0).attr("id");
         var resultUrl = "post-" + urlArray[urlArray.length - 2];
         if(resultUrl == id){
@@ -57,4 +81,3 @@ function(e, t, a) {
     } (),
     n()
 } (window, document);
-</=>
