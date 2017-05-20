@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="标记," />
+  <meta name="keywords" content="工具" />
 
 
 
@@ -87,7 +87,7 @@
 
 
 <meta name="description" content="文章简介。。。">
-<meta name="keywords" content="标记">
+<meta name="keywords" content="工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="helloworld">
 <meta property="og:url" content="qagirl.coding.me/2017/05/13/helloworld/index.html">
@@ -95,7 +95,7 @@
 <meta property="og:description" content="文章简介。。。">
 <meta property="og:image" content="/2017/05/13/helloworld/welcome.gif">
 <meta property="og:image" content="/2017/05/13/helloworld/blog.jpeg">
-<meta property="og:updated_time" content="2017-05-14T04:39:35.000Z">
+<meta property="og:updated_time" content="2017-05-20T09:44:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="helloworld">
 <meta name="twitter:description" content="文章简介。。。">
@@ -334,8 +334,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/种类/" itemprop="url" rel="index">
-                    <span itemprop="name">种类</span>
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -526,7 +526,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -604,14 +604,14 @@
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  由 <a rel="external nofollow" class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+  <a rel="external nofollow" class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -763,6 +763,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
@@ -775,7 +790,6 @@
 <script>
   $(document).ready(function(){
     var url = window.location.pathname;
-    console.log(url);
     if("/" === url){
       jQuery.getScript("/js/src/love.js")
       .done(function () {
