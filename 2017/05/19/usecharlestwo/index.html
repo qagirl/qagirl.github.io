@@ -100,7 +100,10 @@
 <meta property="og:image" content="/2017/05/19/usecharlestwo/execute.png">
 <meta property="og:image" content="/2017/05/19/usecharlestwo/map.png">
 <meta property="og:image" content="/2017/05/19/usecharlestwo/to.png">
-<meta property="og:updated_time" content="2017-05-19T09:33:10.000Z">
+<meta property="og:image" content="/2017/05/19/usecharlestwo/save.png">
+<meta property="og:image" content="/2017/05/19/usecharlestwo/local.png">
+<meta property="og:image" content="/2017/05/19/usecharlestwo/executetwo.png">
+<meta property="og:updated_time" content="2017-07-07T08:57:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qagirl 教你玩转 Charles（二）">
 <meta name="twitter:description" content="看吧！都说了Charles很牛了吧！一篇都没有写完！现在继续写！">
@@ -392,7 +395,10 @@
 </ol>
 <h4 id="Map-功能"><a href="#Map-功能" class="headerlink" title="Map 功能"></a>Map 功能</h4><p>Charles 的 Map 功能分 Map Remote 和 Map Local 两种，顾名思义，Map Remote 是将指定的网络请求重定向到另一个网址请求地址，Map Local 是将指定的网络请求重定向到本地文件。</p>
 <p>在 Charles 的菜单中，选择 “Tools”-&gt;”Map Remote” 或 “Map Local” 即可进入到相应功能的设置页面。</p>
-<div><br>  <img src="/2017/05/19/usecharlestwo/map.png"><br></div><br>对于 Map Remote 功能，我们需要分别填写网络重定向的源地址和目的地址，对于不需要限制的条件，可以留空。下图是一个示例，我将所有 aider.meizu.com（测试服务器）的请求重定向到了 aider.flyme.com（线上服务器）。<br><div><br>  <img src="/2017/05/19/usecharlestwo/to.png"><br></div>
+<div><br>  <img src="/2017/05/19/usecharlestwo/map.png"><br></div><br>对于 Map Remote 功能，我们需要分别填写网络重定向的源地址和目的地址，对于不需要限制的条件，可以留空。下图是一个示例，我将所有 aider.meizu.com（测试服务器）的请求重定向到了 aider.flyme.com（线上服务器）。<br><div><br>  <img src="/2017/05/19/usecharlestwo/to.png"><br></div><br>对于 Map Local 功能，我们需要填写的重定向的源地址和本地的目标文件。对于有一些复杂的网络请求结果，我们可以先使用 Charles 提供的 “Save Response…” 功能，将请求结果保存到本地（如下图所示），然后稍加修改，成为我们的目标映射文件。<br><div><br>  <img src="/2017/05/19/usecharlestwo/save.png"><br></div><br>下图是一个示例，我将一个指定的网络请求通过 Map Local 功能映射到了本地的一个经过修改的文件中。<br><div><br>  <img src="/2017/05/19/usecharlestwo/local.png"><br></div>
+
+<h4 id="Breakpoints-功能"><a href="#Breakpoints-功能" class="headerlink" title="Breakpoints 功能"></a>Breakpoints 功能</h4><p>对于临时性的修改，我们最好使用 Breakpoints 功能。<br>Breakpoints 功能类似我们在 Xcode 中设置的断点一样，当指定的网络请求发生时，Charles 会截获该请求，这个时候，我们可以在 Charles 中临时修改网络请求的返回内容。<br>下图是我们临时修改获取用户信息的 API，将用户的昵称进行了更改，修改完成后点击 “Execute” 则可以让网络请求继续进行。</p>
+<p><div><br>  <img src="/2017/05/19/usecharlestwo/executetwo.png"><br></div><br>需要注意的是，使用 Breakpoints 功能将网络请求截获并修改过程中，整个网络请求的计时并不会暂停，所以长时间的暂停可能导致客户端的请求超时。</p>
 
       
     </div>
@@ -589,7 +595,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Charles-功能介绍"><span class="nav-number">1.</span> <span class="nav-text">Charles 功能介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模拟慢网速"><span class="nav-number">1.1.</span> <span class="nav-text">模拟慢网速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给服务器做压力测试"><span class="nav-number">1.2.</span> <span class="nav-text">给服务器做压力测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改服务器返回内容"><span class="nav-number">1.3.</span> <span class="nav-text">修改服务器返回内容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Map-功能"><span class="nav-number">1.3.1.</span> <span class="nav-text">Map 功能</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Charles-功能介绍"><span class="nav-number">1.</span> <span class="nav-text">Charles 功能介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模拟慢网速"><span class="nav-number">1.1.</span> <span class="nav-text">模拟慢网速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给服务器做压力测试"><span class="nav-number">1.2.</span> <span class="nav-text">给服务器做压力测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改服务器返回内容"><span class="nav-number">1.3.</span> <span class="nav-text">修改服务器返回内容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Map-功能"><span class="nav-number">1.3.1.</span> <span class="nav-text">Map 功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Breakpoints-功能"><span class="nav-number">1.3.2.</span> <span class="nav-text">Breakpoints 功能</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
